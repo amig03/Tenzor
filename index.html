@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <meta charset="utf-8" />
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <title>Binary Sort</title>
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <link rel="stylesheet" type="text/css" href="css/main.css" />
+</head>
+<body>
+   <p id="manual_header">Инструкция</p>
+   <div id="manual_content">
+      Страница наглядно показывает алгоритм сортировки бинарным деревом.<br/>
+      Для начала демонстрации нажмите кнопку "Начать следующую сортировку". 
+      После этого данная кнопка станет заблокирована. Кнопка разблокируется, когда массив полностью отсортируется. Тогда и будет возможность запустить новую сортировку.<br/>
+      Чтобы остановить сортировку немедленно - нажмите на кнопку "Остановить сортировку" - страница перезагрузится и у вас будет возможность начать сортировку заново.<br/><br/>
+      После нажатия кнопки "Начать следующую сортировку" страница создаст массив для сортировки и отправит его в сортировочную зону, где
+      будет происходить графическая сортировка.<br/><br/>
+      Для создания страницы использовались библиотеки jQuery и SVG.js, а также дополнительная надстройка svg.filter.js для управления фильтрами в SVG, например, такими, как размытие по Гауссу.<br/>
+   </div>
+   <input type="button" id="start_button" value="Начать следующую сортировку">
+   <input type="button" id="stop_button" value="Остановить сортировку">
+   <p>Исходные данные:</p>
+   <div id="numbers_input"></div>
+   <p>Результат:</p>
+   <div id="numbers_output">
+      <div id="numbers_path">
+         <div id="numbers_container"></div>
+      </div>
+      <div class="portal_close"></div>
+   </div>
+   <div id="svg_name">SORTING ZONE</div>
+   <div id="svg"></div>
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+<script src="js/svg.min.js"></script>
+<script src="js/svg.filter.js"></script>
+<script src="js/BinaryTree.js"></script>
+<script src="js/Graph.js"></script>
+<script src="js/utils_classes.js"></script>
+<script src="js/event_handlers.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
